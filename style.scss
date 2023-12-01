@@ -1,3 +1,7 @@
+@import "product_style";
+@import "variable";
+@import "catalog_style";
+
 * {
     margin: 0;
     padding: 0;
@@ -47,24 +51,28 @@ body {
 }
 
 .dropdown__menu__content {
-    display: none;
+    right: -100%;
     width: 232px;
     height: 634px;
     background: #FFF;
     position: absolute;
     z-index: 10;
     padding-top: 32px;
-    top: 75px;
+    top: 78px;
+    
+    transition: right 0.5s;
+}
+
+#btn__dropdown:checked~ .dropdown__menu__content {
     right: 0;
+    
+
 }
 
-.dropdown__menu {
-    transition: all 0.3s;
-}
-
-.dropdown__menu:hover .dropdown__menu__content {
-    display: block;
-
+#btn__dropdown {
+    position: absolute;
+    left: -99999999px;
+    visibility: hidden;
 }
 
 .dropdown__menu__title {
@@ -290,7 +298,7 @@ body {
     display: none;
 } 
 
-.box__img__products:hover .hover_products{
+.items__products:hover .hover_products{
     position: absolute;
     display: block;
     display: flex;

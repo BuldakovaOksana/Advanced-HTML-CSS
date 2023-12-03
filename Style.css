@@ -501,7 +501,7 @@ summary::-webkit-details-marker {
   font-weight: 300;
   line-height: normal;
 }
-.checkout__input4 {
+.checkout__btn {
   color: #4A4A4A;
   font-family: Lato;
   font-size: 11px;
@@ -509,7 +509,16 @@ summary::-webkit-details-marker {
   font-weight: 300;
   line-height: normal;
   padding: 10px 14px 12px 15px;
-  width: 101px;
+  border-color: #A4A4A4;
+  background-color: #FFFFFF;
+  border-style: solid;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+.checkout__btn:hover {
+  color: #FFF;
+  background-color: #F16D7F;
+  border-color: #F16D7F;
 }
 .checkout__proceed {
   background-color: #F5F3F3;

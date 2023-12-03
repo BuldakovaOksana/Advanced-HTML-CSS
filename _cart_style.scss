@@ -146,7 +146,7 @@
         line-height: normal;
     }
 
-    &__input4 {
+    &__btn {
         color: #4A4A4A;
         font-family: Lato;
         font-size: 11px;
@@ -154,7 +154,18 @@
         font-weight: 300;
         line-height: normal;
         padding: 10px 14px 12px 15px;
-        width: 101px;
+        border-color: #A4A4A4;
+        background-color: #FFFFFF;
+        border-style: solid;
+        margin-top: 20px;
+        transition: all 0.3s;
+        
+    }
+
+    &__btn:hover {
+        color: #FFF;
+        background-color: #F16D7F;
+        border-color: #F16D7F;
     }
 
     &__proceed {

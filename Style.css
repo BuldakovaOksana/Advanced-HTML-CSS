@@ -377,6 +377,224 @@ summary::-webkit-details-marker {
   line-height: normal;
 }
 
+.card__checkout {
+  padding-top: 96px;
+  margin-bottom: 72px;
+  display: flex;
+  gap: 128px;
+}
+
+.product__cart {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.product__cart__card {
+  display: flex;
+  align-items: center;
+  width: 652px;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+.product__cart__card img {
+  max-width: 262px;
+  max-height: 306px;
+  margin-right: 32px;
+}
+.product__cart__subtitle {
+  color: #222;
+  max-width: 262px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+.product__cart__description {
+  list-style: none;
+  padding: 0;
+}
+.product__cart__item {
+  display: flex;
+  color: #575757;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.product__cart__item__pink {
+  color: #EF5B70;
+}
+.product__cart__item__grey {
+  color: #6F6E6E;
+}
+.product__cart__item__col {
+  width: 44px;
+  height: 25px;
+  border-width: 1px;
+  border-color: #EAEAEA;
+  border-style: solid;
+  text-align: center;
+  color: #656565;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 24px;
+}
+.product__cart__close {
+  height: 306px;
+  padding-top: 28px;
+  margin-left: 57px;
+}
+
+.checkout {
+  padding-top: 17px;
+}
+.checkout__adress {
+  margin-bottom: 57px;
+}
+.checkout__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.checkout__title {
+  color: #222;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.checkout__input {
+  display: block;
+  border-color: #A4A4A4;
+  border-width: 1px;
+  border-style: solid;
+}
+.checkout__input1 {
+  padding: 12.5px 17px 15.5px;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  width: 360px;
+}
+.checkout__input2 {
+  padding: 12.5px 17px 15.5px;
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.checkout__input3 {
+  padding: 12.5px 17px 15.5px;
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.checkout__input4 {
+  color: #4A4A4A;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 10px 14px 12px 15px;
+  width: 101px;
+}
+.checkout__proceed {
+  background-color: #F5F3F3;
+  padding: 39px 34px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.checkout__sub {
+  color: #4A4A4A;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.checkout__grand {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.checkout__grand__price {
+  color: #F16D7F;
+  font-weight: 700;
+  margin-left: 25px;
+}
+.checkout__band {
+  background-color: #E2E2E2;
+  height: 1px;
+  flex-shrink: 0;
+  width: 275px;
+  height: 1px;
+  flex-shrink: 0;
+  margin-top: 21px;
+  margin-bottom: 17px;
+}
+.checkout_btn {
+  width: 273px;
+  height: 50px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border-color: #A4A4A4;
+  border-style: solid;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+}
+.checkout_btn:hover {
+  color: #FFF;
+  background-color: #F16D7F;
+  border-color: #F16D7F;
+}
+
+.cart__btn__box {
+  display: flex;
+  gap: 192px;
+  margin-bottom: 128px;
+}
+
+.cart__btn {
+  padding: 17px 40px;
+  background-color: #FFFFFF;
+  border-color: #A4A4A4;
+  border-style: solid;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  transition: all 0.3s;
+}
+
+.cart__btn:hover {
+  color: #FFF;
+  background-color: #F16D7F;
+  border-color: #F16D7F;
+}
+
 * {
   margin: 0;
   padding: 0;

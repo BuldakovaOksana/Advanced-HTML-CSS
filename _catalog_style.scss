@@ -48,7 +48,7 @@ summary::-webkit-details-marker {
         padding-top: 13px;
     }
     &__text {
-        color: #000;
+        color: $collorTextB;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
@@ -159,5 +159,56 @@ summary::-webkit-details-marker {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+}
+
+/* Блок для планшета */
+
+@media (max-width: 1024px) {
+    .filter__sort {
+        justify-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .box__products {
+        margin-bottom: 40px; 
+    }
+
+    .pagination {
+        margin-bottom: 63px;
+    }
+
+    /* Блок для мобильной версии */
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .filter {
+
+            &__heading {
+                padding-left: 0;
+            }
+            &__text {
+                display: none;
+            }
+            &__img {
+                width: 37px;
+                height: 25px;
+            }
+            &__content {
+                width: 304px;
+            }
+        }
+
+        .sort {
+            gap: 12px;
+            &__name {
+                gap: 9px;
+            }
+            &__text {
+                font-size: 12px;
+            }
+        }
+
+
     }
 }

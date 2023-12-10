@@ -2,6 +2,7 @@
 @import "variable";
 @import "catalog_style";
 @import "cart_style";
+@import "registration_style";
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +23,7 @@ body {
 }
 
 .header {
-    background-color: #222222;
+    background-color: $collorTextB;
 }
 
 .header__logo {
@@ -39,6 +40,10 @@ body {
     gap: 41px;
 }
 
+.header__loupe:hover path {
+    fill: $colorSite;
+}
+
 .header__right {
     display: flex;
     align-items: center;
@@ -46,7 +51,7 @@ body {
 }
 
 .btn__dropdown {
-    background-color: #222222;
+    background-color: $collorTextB;
     border: none;
 }
 
@@ -63,10 +68,17 @@ body {
     transition: right 0.5s;
 }
 
+.dropdown__menu__content a:hover {
+    font-weight: bold;
+}
+
 #btn__dropdown:checked~ .dropdown__menu__content {
     right: 0;
     
 
+}
+.btn__dropdown:hover path{
+    fill:$colorSite;
 }
 
 #btn__dropdown {
@@ -76,7 +88,7 @@ body {
 }
 
 .dropdown__menu__title {
-    color: #000;
+    color: $collorTextB;
     width: 55px;
     font-size: 14px;
     font-style: normal;
@@ -100,7 +112,7 @@ body {
 }
 
 .title_name__link {
-    color: #F16D7F;
+    color: $colorSite;
     width: 55px;
     font-size: 14px;
     font-style: normal;
@@ -133,8 +145,16 @@ body {
     line-height: normal; 
 }
 
+.header__link-site:hover path {
+    fill: $colorSite;
+}
+
 .cart {
     position: relative;
+}
+
+.cart:hover path {
+    fill: $colorSite;
 }
 
 .number::after {
@@ -145,7 +165,7 @@ body {
     width: 19px;
     height: 19px;
     flex-shrink: 0;
-    background-color: #F16D7F;
+    background-color: $colorSite;
     color: #FFF;
     font-size: 12px;
     font-style: normal;
@@ -178,7 +198,7 @@ body {
 }
 
 .title {
-    color: #222;
+    color: $collorTextB;
     font-size: 48px;
     font-style: normal;
     font-weight: 900;
@@ -186,7 +206,7 @@ body {
 }
 
 .top__subtitle {
-    color: #222;
+    color: $collorTextB;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -194,7 +214,7 @@ body {
 }
 
 .pink__top__subtitle {
-    color: #F16D7F;
+    color: $colorSite;
 }
 
 /* блок offer */
@@ -206,11 +226,17 @@ body {
     margin-bottom: 96px;
 }
 
+
+
 .item__offer {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.item__offer:hover {
+    box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
 }
 
 .accesories {
@@ -236,7 +262,7 @@ body {
 }
 
 .subtitle__offer__pink {
-    color: #F16D7F;
+    color: $colorSite;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -252,7 +278,7 @@ body {
 }
 
 .subtitle__products {
-    color: #222;
+    color: $collorTextB;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -278,31 +304,55 @@ body {
 }
 
 .items__products {
+    position: relative;
     background-color: #F8F8F8;
     display: flex;
     flex-direction: column;
 }
 
 .box__img__products {
-    position: relative;
+    
     width: 360px;
     height: 420px;
     transition: all 0.3s;
 }
 
-.img__items__products {
-    position: absolute;
-} 
-
 .hover_products {
     display: none;
 } 
 
-.items__products:hover .hover_products{
-    position: absolute;
-    display: block;
+.items__products:hover .img__items__products{
+    filter: brightness(0.3);
+}
+
+.items__products:hover .add {
     display: flex;
 }
+
+.add {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 14px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    border: 1px #FFF solid;
+    display: none;
+    &__text {
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &:hover {
+       
+        filter: brightness(0.5);
+    }
+}
+
+
 
 .content__products {
     padding: 24px 16px;
@@ -312,12 +362,14 @@ body {
 }
 
 .subtitle__items__products {
+    display: block;
     color: #000;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
 
 .text__items__products {
     color: #5D5D5D;
@@ -329,7 +381,7 @@ body {
 }
 
 .price__items__products {
-    color: #F16D7F;
+    color: $colorSite;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -337,12 +389,13 @@ body {
 }
 
 .button__products {
-    color: #F26376;
+    color: $colorSite;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-color: #FF6A6A;
+    border-color: $colorSite;
+    border-style: solid;
     background: #FFF;
     width: 212px;
     height: 48px;
@@ -353,7 +406,7 @@ body {
 }
 
 .button__products:hover {
-    background-color: #F16D7F;
+    background-color: $colorSite;
     color: #FFFFFF;
     border: none;
 }
@@ -371,6 +424,15 @@ body {
 }
 
 .item__feature {
+    transition: all 0.3s;
+}
+
+.item__feature:hover path {
+    fill: $collorTextW;
+}
+
+.feature__link {
+    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -403,7 +465,11 @@ body {
 
 .top__photo-subscribe {
     background-image: url(img/fon_photo_subscribe.png);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: left center;
+    
+    
     padding-top: 97px;
     padding-bottom: 126px;
     display: flex;
@@ -423,7 +489,7 @@ body {
 }
 
 .text__photo-subscribe {
-    color: #222224;
+    color: $collorTextB;
     text-align: center;
     font-size: 20px;
     font-style: normal;
@@ -443,7 +509,7 @@ body {
 }
 
 .title__photo-subscribe {
-    color: #222224;
+    color: $collorTextB;
     text-align: center;
     font-size: 24px;
     font-style: normal;
@@ -452,7 +518,7 @@ body {
 }
 
 .subtitle__photo-subscribe {
-    color: #222224;
+    color: $collorTextB;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -477,7 +543,7 @@ body {
     justify-content: center;
     flex-shrink: 0;
     font-family: Lato;
-    color: #222224;
+    color: $collorTextB;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -502,12 +568,18 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    
+    &:hover {
+        background-color: $collorTextW;
+        border: 1px $colorSite solid;
+        color: $colorSite;
+    }
 }
 
 /* блок footer */
 
 .footer {
-    background-color: #222224;
+    background-color: $collorTextB;
     padding-top: 24px;
     padding-bottom: 23px;
     display: flex;
@@ -541,7 +613,7 @@ body {
 }
 
 .link:hover {
-    background-color: #F16D7F;
+    background-color: $colorSite;
     
 }
 
@@ -553,8 +625,8 @@ body {
 
 @media (max-width: 1024px) {
     .center {
-        padding-left: calc(50% - 376px);
-        padding-right: calc(50% - 376px);
+        padding-left: calc(50% - 370px);
+        padding-right: calc(50% - 370px);
     }
 
     .header__logo {
